@@ -22,10 +22,9 @@ class RegisterViewController: UIViewController {
                 if let err = error {
                     print(err)
                 } else {
-                    self.performSegue(withIdentifier: "RegisterToChat", sender: nil)
+                    self.performSegue(withIdentifier: K.registerSegue, sender: nil)
                 }
             }
         }
     }
-    
 }

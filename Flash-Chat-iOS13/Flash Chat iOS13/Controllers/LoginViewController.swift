@@ -19,11 +19,9 @@ class LoginViewController: UIViewController {
         if let email = emailTextfield.text, let pass = passwordTextfield.text {
             Auth.auth().signIn(withEmail: email, password: pass) { [weak self] authResult, error in
               guard let strongSelf = self else { return }
-                strongSelf.performSegue(withIdentifier: "LoginToChat", sender: nil)
+                strongSelf.performSegue(withIdentifier: K.loginSegue, sender: nil)
             }
         }
-        
-        
     }
     
 }
